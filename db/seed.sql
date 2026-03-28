@@ -1,12 +1,10 @@
--- 1. INSERT USERS
 INSERT INTO users
   (user_id, name, email, role, description)
 VALUES
   ('U-001', 'Admin User', 'admin@rehabtrack.local', 'admin', 'Full access — can create, edit, delete all records'),
   ('U-002', 'Riya Thomas', 'riya@rehabtrack.local', 'data_entry', 'Can create and edit patient and assessment records'),
   ('U-003', 'Viewer Account', 'viewer@rehabtrack.local', 'viewer', 'Read-only access across all data');
--- 2. INSERT PATIENTS
--- We will assign U-002 as the creator for all these initial records.
+
 INSERT INTO patients
   (patient_id, name, age, gender, diagnosis, location, created_by)
 VALUES
@@ -16,8 +14,7 @@ VALUES
   ('PT-004', 'Meena Krishnan', 61, 'Female', 'Depression + MCI', 'Branch C', 'U-002'),
   ('PT-005', 'Rajan Pillai', 79, 'Male', 'Vascular Dementia', 'Branch B', 'U-002');
 
--- 3. INSERT ASSESSMENTS
--- All assessments were entered by U-002 (Riya Thomas)
+
 INSERT INTO assessments
   (patient_id, assessment_tool, score, max_score, administration_date, created_by)
 VALUES
@@ -43,8 +40,7 @@ VALUES
   ('PT-005', 'PHQ-9', 18, 27, '2024-02-21', 'U-002'),
   ('PT-005', 'Grip Strength (kg)', 14, 60, '2024-02-22', 'U-002');
 
--- 4. INSERT THERAPY SESSIONS
--- All therapy sessions were entered by U-002 (Riya Thomas)
+
 INSERT INTO therapy_sessions
   (patient_id, department, therapist_name, session_date, notes, created_by)
 VALUES
