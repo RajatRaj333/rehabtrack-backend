@@ -18,9 +18,9 @@ CREATE TABLE patients
   diagnosis VARCHAR(200),
   location VARCHAR(100),
   created_by VARCHAR
-(20) NOT NULL REFERENCES users
-(user_id),
-created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  (20) NOT NULL REFERENCES users
+  (user_id),
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 
@@ -32,10 +32,10 @@ CREATE TABLE assessments
   score INT NOT NULL,
   max_score INT NOT NULL,
   administration_date DATE NOT NULL,
- created_by VARCHAR
-(20) NOT NULL REFERENCES users
-(user_id),
-created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  created_by VARCHAR
+  (20) NOT NULL REFERENCES users
+  (user_id),
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 
@@ -47,10 +47,10 @@ CREATE TABLE therapy_sessions
   therapist_name VARCHAR(100),
   session_date DATE NOT NULL,
   notes TEXT,
- created_by VARCHAR
-(20) NOT NULL REFERENCES users
-(user_id),
-created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  created_by VARCHAR
+  (20) NOT NULL REFERENCES users
+  (user_id),
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 
